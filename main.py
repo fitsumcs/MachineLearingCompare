@@ -5,7 +5,7 @@ import numpy as np
 st.title("Streamlit Based App")
 st.write(""" 
 
-   This is a Project the allow you to compare Machine learing algorthims !!!
+   This is a Project that allow you to compare Machine learing algorthims !!!
 
 
 """)
@@ -45,7 +45,7 @@ def parmConfgurationUI(algorithmChoice):
         parameters["C"] = C
     else:
         maximumDepth = st.sidebar.slider("Maximum Depth of Each Tree ",2, 17 )
-        treeSize = st.sidebar.slider("Number of Estimators ",2, 17 )
+        treeSize = st.sidebar.slider("Number of Estimators ",1, 100 )
         parameters["maximumDepth"] = maximumDepth
         parameters["treeSize "] = treeSize 
 
