@@ -10,6 +10,9 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt 
 
 
+# Change Page Title and Icon 
+# st.beta_set_page_config(page_title='Compare ML Algorithms')
+
 st.title("Compare Machine Learing Algorthims")
 st.subheader(""" 
 
