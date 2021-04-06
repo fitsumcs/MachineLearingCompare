@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 st.title("Streamlit Based App")
 st.subheader(""" 
 
-   This is a Project that allow you to compare Machine learing algorthims !!!
+   This is an Application that allow you to compare Machine learing algorthims !!!
 
 
 """)
