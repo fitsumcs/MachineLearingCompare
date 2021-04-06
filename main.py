@@ -11,7 +11,9 @@ st.write("""
 # data set selection 
 
 dataset_choice =  st.sidebar.selectbox("Dataset Selection", ("Breast Cancer", "Wine Dataset", "Iris"))
+algorithm_choice =  st.sidebar.selectbox("Algorithm Selection", ("SVM", "KNN", "RF"))
 
 st.write(dataset_choice)
+st.write(algorithm_choice)
 
 
