@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
 
 
 st.title("Streamlit Based App")
@@ -67,6 +68,12 @@ def get_algorithm(algorithmChoice, params):
     return classifier
 
 clf = get_algorithm(algorithm_choice, param)
+
+# Performing the classification 
+X_train , X_test , y_train , y_test = train_test_split(X,y,test_size=0.2,random_state=1234)  #20% is used for testing 
+clf.fit(X_train,y_train)
+y_predict = clf.predict(X_test)
+
 
 
 
