@@ -43,6 +43,11 @@ def parmConfgurationUI(algorithmChoice):
     if algorithmChoice == "SVM":
         C= st.sidebar.slider("C: Regularization Parameter",.01, 10.0 )
         parameters["C"] = C
+    else:
+        maximumDepth = st.sidebar.slider("Maximum Depth of Each Tree ",2, 17 )
+        treeSize = st.sidebar.slider("Number of Estimators ",2, 17 )
+        parameters["maximumDepth"] = maximumDepth
+        parameters["treeSize "] = treeSize 
 
 parmConfgurationUI(algorithm_choice)
 
