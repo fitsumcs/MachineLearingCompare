@@ -5,6 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 
 
 st.title("Streamlit Based App")
@@ -73,6 +74,11 @@ clf = get_algorithm(algorithm_choice, param)
 X_train , X_test , y_train , y_test = train_test_split(X,y,test_size=0.2,random_state=1234)  #20% is used for testing 
 clf.fit(X_train,y_train)
 y_predict = clf.predict(X_test)
+accuracy = accuracy_score(y_test,y_predict)
+st.write("Algorithm : " , algorithm_choice)
+st.write("Accuracy: " , accuracy)
+
+
 
 
 
