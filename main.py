@@ -10,6 +10,8 @@ st.write("""
 
 # data set selection 
 
-st.selectbox("Dataset Selection", ("Breast Cancer", "Wine Dataset", "Iris"))
+dataset_choice =  st.sidebar.selectbox("Dataset Selection", ("Breast Cancer", "Wine Dataset", "Iris"))
+
+st.write(dataset_choice)
 
 
