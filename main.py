@@ -1,5 +1,6 @@
 import streamlit as st 
 from sklearn import datasets
+import numpy as np
 
 st.title("Streamlit Based App")
 st.write(""" 
@@ -30,5 +31,6 @@ def get_data(dataset_choice):
 # Display the info about the data 
 X,y = get_data(dataset_choice)
 st.write("Shape : " , X.shape)
+st.write("Numbers of Class : " , len(np.unique(y)))
 
 
