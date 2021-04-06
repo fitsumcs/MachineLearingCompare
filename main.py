@@ -34,3 +34,15 @@ st.write("Shape : " , X.shape)
 st.write("Numbers of Class : " , len(np.unique(y)))
 
 
+# Add Parameter Configuration 
+def parmConfgurationUI(algorithmChoice):
+    parameters = dict()
+    if algorithmChoice == "KNN":
+        K = st.sidebar.slider("K: Number of Nearest Neighbor",1 , 20 )
+        parameters["K"] = K
+
+parmConfgurationUI(algorithm_choice)
+
+
+
+
