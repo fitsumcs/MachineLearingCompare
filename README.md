@@ -1,4 +1,4 @@
-# MachineLearingCompare
+# MachineLearningCompare
 A machine learning comparison application using streamlite framework 
 
 ## Required Packages  : 
