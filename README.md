@@ -7,3 +7,7 @@ A machine learning comparison application using streamlite framework
 *  matplot [ pip install matplotlib ]     
 
 ###### To Run the App You can use : streamlit run main.py  
+
+#### Hosted Page On Heroku  :  [Compare ML Algorithms](https://machinelearningcompare.herokuapp.com/)
+
+### Enjoy :) 
