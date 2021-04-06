@@ -8,4 +8,8 @@ st.write("""
 
 """)
 
+# data set selection 
+
+st.selectbox("Dataset Selection", ("Breast Cancer", "Wine Dataset", "Iris"))
+
 
