@@ -10,7 +10,7 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt 
 
 
-st.title("Streamlit Based App")
+st.title("Compare Machine Learing Algorthims")
 st.subheader(""" 
 
    This is an Application that allow you to compare Machine learing algorthims !!!
