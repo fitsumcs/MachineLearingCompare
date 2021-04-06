@@ -40,6 +40,9 @@ def parmConfgurationUI(algorithmChoice):
     if algorithmChoice == "KNN":
         K = st.sidebar.slider("K: Number of Nearest Neighbor",1 , 20 )
         parameters["K"] = K
+    if algorithmChoice == "SVM":
+        C= st.sidebar.slider("C: Regularization Parameter",.01, 10.0 )
+        parameters["C"] = C
 
 parmConfgurationUI(algorithm_choice)
 
