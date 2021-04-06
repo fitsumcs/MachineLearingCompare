@@ -6,6 +6,8 @@ from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+from sklearn.decomposition import PCA 
+import matplotlib.pyplot as plt 
 
 
 st.title("Streamlit Based App")
@@ -77,6 +79,24 @@ y_predict = clf.predict(X_test)
 accuracy = accuracy_score(y_test,y_predict)
 st.write("Algorithm : " , algorithm_choice)
 st.write("Accuracy: " , accuracy)
+
+#plot the data set , making with 2D via PCA 
+pca = PCA(2)
+x_projected = pca.fit_transform(X)
+
+x1 = x_projected[0:,0]
+x2 = x_projected[0:,1]
+
+figure = plt.figure()
+plt.scatter(x1,x2,c=y,alpha=0.8,cmap="viridis")
+plt.xlabel("Principal Component 1")
+plt.ylabel("Principal Component 2")
+plt.colorbar()
+st.pyplot(figure)
+
+
+
+
 
 
 
