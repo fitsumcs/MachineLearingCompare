@@ -1,6 +1,10 @@
 import streamlit as st 
 from sklearn import datasets
 import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+
 
 st.title("Streamlit Based App")
 st.write(""" 
@@ -35,7 +39,7 @@ st.write("Numbers of Class : " , len(np.unique(y)))
 
 
 # Add Parameter Configuration 
-def parmConfgurationUI(algorithmChoice):
+def parmConfigurationUI(algorithmChoice):
     parameters = dict()
     if algorithmChoice == "KNN":
         K = st.sidebar.slider("K: Number of Nearest Neighbor",1 , 20 )
@@ -47,9 +51,22 @@ def parmConfgurationUI(algorithmChoice):
         maximumDepth = st.sidebar.slider("Maximum Depth of Each Tree ",2, 17 )
         treeSize = st.sidebar.slider("Number of Estimators ",1, 100 )
         parameters["maximumDepth"] = maximumDepth
-        parameters["treeSize "] = treeSize 
+        parameters["treeSize"] = treeSize 
+    return parameters
 
-parmConfgurationUI(algorithm_choice)
+param =  parmConfigurationUI(algorithm_choice)
+
+# Working on each algorithm 
+def get_algorithm(algorithmChoice, params):
+    if algorithmChoice == "KNN":
+        classifier = KNeighborsClassifier(n_neighbors=params["K"])
+    if algorithmChoice == "SVM":
+        classifier = SVC(C=params["C"])
+    else:
+        classifier =RandomForestClassifier(n_estimators=params["treeSize"], max_depth=params["maximumDepth"], random_state=1234)
+    return classifier
+
+clf = get_algorithm(algorithm_choice, param)
 
 
 
