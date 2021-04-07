@@ -1,6 +1,15 @@
 # MachineLearningCompare
 A machine learning comparison application using streamlite framework 
 
+## Currently Supported Machine Learning Algorithms  : 
+*  Support Vector Machine (SVM)
+*  K-Nearest Neighbors(KNN)     
+*  Random Forest(RF) 
+
+### The UI 
+![alt text](./asset/img/ui.png)
+
+
 ## Required Packages  : 
 *  streamlit [ pip install streamlit    ]
 *  scikit learn [pip install scikit-learn ]       
